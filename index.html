@@ -4,25 +4,20 @@
     <title>Hello World - 世界比你想象中的更精彩</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
-
+    <!-- 字母样式 -->
+    <link href="css/font.css" rel="stylesheet">
+    <!-- 主要样式 -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 动画库 -->
     <link rel="stylesheet" href="css/animate.css">
+    <!-- 轮播图样式 -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
+    <!-- 图标 -->
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
+    <!-- 主题样式 -->
     <link rel="stylesheet" href="css/style.css">
-    <style type="text/css">
-    body,td,th {
-	font-family: Inconsolata, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	font-size: 18px;
-}
-    </style>
   </head>
   <body>
     
@@ -376,10 +371,6 @@
                     <ul class="list-unstyled">
                       <li><a href="about.html">关于</a></li>
                       <li><a href="note.html">笔记</a></li>
-                      <!-- <li><a href="wallpaper.html">壁纸</a></li>
-                      <li><a href="game.html">游戏</a></li>
-                      <li><a href="music.html">音乐</a></li>
-                      <li><a href="contact.html">留言</a></li> -->
                     </ul>
                   </div>
 
@@ -401,17 +392,25 @@
     </div>
     
     <!-- loader -->
-    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+    <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/>
+      </svg>
+    </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 保证兼容 -->
     <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/popper.min.js"></script>
+    <!-- 弹出框定位的暂时不用 -->
+    <!-- <script src="js/popper.min.js"></script> -->
+    <!-- boot -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- 轮播图 -->
     <script src="js/owl.carousel.min.js"></script>
+    <!-- 滚动监听 -->
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
-
-    
     <script src="js/main.js"></script>
   </body>
 </html>
