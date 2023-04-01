@@ -1938,6 +1938,23 @@ blockquote p {
   stroke-linecap: round;
 }
 
+#loader span {
+  display: block;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  position: absolute;
+  /* 添加绝对定位 */
+  top: 50%;
+  /* 把元素上边缘与父元素中心对齐 */
+  left: 50%;
+  /* 把元素左边缘与父元素中心对齐 */
+  transform: translate(-50%, -50%);
+  /* 微调位置 */
+  margin-top: 48px;
+  /* 添加 margin-top 值 */
+}
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
