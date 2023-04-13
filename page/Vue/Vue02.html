@@ -5,6 +5,9 @@
   <title>Vue源码解析 - Hello World</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- 代码高亮 -->
+  <link rel="stylesheet" href="/css/default.min.css">
+
   <link href="/css/font.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/animate.css">
@@ -14,6 +17,43 @@
   <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
   <!-- Theme Style -->
   <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    pre {
+      position: relative;
+      background-color: #f6f8fa;
+      padding: 16px;
+      border-radius: 4px;
+      line-height: 1.5;
+      overflow-x: auto;
+    }
+
+    code.hljs {
+      display: block;
+      font-size: 14px;
+      font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+      color: #333;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.25rem;
+      right: 0.25rem;
+      /* 正常状态下的样式 */
+      background: #f0f0f0;
+      color: #333;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .copy-btn:active {
+      /* 点击时的样式 */
+      background: #333;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -45,38 +85,24 @@
                   <h4 class="mb-2">1.响应式数据绑定</h4>
                   <p>Vue 的响应式系统是通过利用 ES5 中 Object.defineProperty 方法来实现的。这种方法允许 Vue 将 data
                     中的数据进行劫持，并在数据发生变化时自动更新相关的视图。Vue 将数据和视图联系起来，当数据发生变化时，会自动重新渲染视图。这样可以避免手动操作 DOM 来更新视图。</p>
-                  <h4 class="mb-2">2.组件化开发</h4>
-                  <p>Vue 的组件系统是其设计原理中的另一个重要部分。组件化开发允许将 UI 界面划分成独立的、可复用的组件，每个组件都包含自己的视图模板、逻辑代码和样式表。组件之间可以相互通信和传递数据，通过
-                    Props 和 Events 等机制来实现。组件化开发让开发者更容易实现代码的复用和维护，提高了开发效率。</p>
-                  <h4 class="mb-2">3.指令系统</h4>
-                  <p>Vue 的指令系统（例如 v-for、v-if、v-bind 等）也是其设计原理的一部分。指令系统允许在模板中添加特殊属性来实现特定的功能。比如 v-for 可以用来循环渲染列表、v-if
-                    可以用来判断是否需要渲染某个元素、v-bind 可以用来将数据绑定到元素的属性上。指令系统让开发者可以更方便地操作视图，提高了开发效率。</p>
-                  <h4 class="mb-2">4.插件化扩展</h4>
-                  <p>Vue 还提供了插件化扩展机制，允许第三方开发者开发并使用自己的插件来扩展 Vue 的功能。插件可以添加全局方法或者 property，也可以添加全局指令或者组件。这种插件化扩展机制为 Vue
-                    提供了更加丰富的功能和更广泛的应用场景。</p>
-                  <h4 class="mb-2">5.模板解析</h4>
-                  <p>Vue 的模板解析引擎可以将 HTML 模板代码转换成虚拟 DOM（Virtual DOM）的形式，然后通过对比新旧虚拟 DOM 的差异，最终只更新需要更新的部分，从而提高了代码的性能。</p>
-                  <p>综上所述，Vue 源码解析可以概括为：通过数据驱动来自动渲染视图，通过组件化将复杂的应用结构变得简单可维护，通过插件机制扩展基础功能，提高了开发的效率和代码质量。</p>
-                  <h2 class="mb-2">Vue3的改进</h2>
-                  <p>
-                  <h4 class="mb-2 mt-2">1.响应式系统</h4>
-                  Vue 2 使用了 Object.defineProperty 来实现响应式系统，而 Vue 3 使用了 Proxy。Proxy 对象可以对整个对象进行劫持，而 Object.defineProperty
-                  只能定义单个属性，并且不支持数组的监测。
-
-                  <h4 class="mb-2 mt-2">2.组件实例</h4>
-                  在 Vue 2 中，组件实例是通过原型继承来创建的，即组件实例共享同一个原型。这样会导致一些问题，比如在开发过程中无法通过 Object.freeze 冻结组件实例上的属性等。而 Vue 3
-                  引入了新的组件实例 API，使用 Proxy 来代理组件实例，避免了这些问题。
-
-                  <h4 class="mb-2 mt-2">3.Composition API</h4>
-                  Vue 2 的选项 API 在处理复杂逻辑时显得力不从心，而 Vue 3 引入了 Composition API，允许根据功能组织代码，而不是根据生命周期钩子。Composition API
-                  让代码更容易重用和测试，并提高了可读性。
-
-                  <h4 class="mb-2 mt-2">4.Teleport 组件</h4>
-                  Vue 3 引入了 Teleport 组件，允许将组件渲染到 DOM 树中的其他位置。这意味着我们可以更容易地创建具有复杂布局的组件，并且可以更灵活地控制它们的位置。
-
-                  <h4 class="mb-2 mt-2">5.性能优化</h4>
-                  Vue 3 在性能方面也做了很多优化，比如编译器的优化、静态提升、树摇和 HoC（Higher Order Component）的支持等。这些都能够提高应用程序的性能和可伸缩性。
-                  </p>
+                  <pre><button class="copy-btn" data-clipboard-target="#code-block">复制</button><code id="code-block" class="hljs language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="app"&gt;&lt;/div&gt;
+&lt;script src="./vue-2.6.10/dist/vue.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+new Vue({
+el: '#app',
+})
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
                 </div>
 
               </div>
@@ -209,8 +235,13 @@
   <script src="/js/owl.carousel.min.js"></script>
   <script src="/js/jquery.waypoints.min.js"></script>
   <script src="/js/jquery.stellar.min.js"></script>
+  <script src="/js/highlight.min.js"></script>
+  <script src="/js/clipboard.min.js"></script>
   <script src="/js/main.js"></script>
   <script>
+    hljs.highlightAll()
+    // 初始化 Clipboard.js
+    var clipboard = new ClipboardJS('.copy-btn');
     $(function () {
       $("header").load("/components/header.html");
     });
