@@ -2002,3 +2002,38 @@ blockquote p {
     stroke-dashoffset: -136px;
   }
 }
+
+pre {
+  position: relative;
+  background-color: #f6f8fa;
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+code.hljs {
+  display: block;
+  font-size: 14px;
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  color: #333;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  /* 正常状态下的样式 */
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-btn:active {
+  /* 点击时的样式 */
+  background: #333;
+  color: #fff;
+}

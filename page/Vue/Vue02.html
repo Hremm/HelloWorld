@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- 代码高亮 -->
   <link rel="stylesheet" href="/css/default.min.css">
-
   <link href="/css/font.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/animate.css">
@@ -17,43 +16,6 @@
   <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
   <!-- Theme Style -->
   <link rel="stylesheet" href="/css/style.css">
-
-  <style>
-    pre {
-      position: relative;
-      background-color: #f6f8fa;
-      padding: 16px;
-      border-radius: 4px;
-      line-height: 1.5;
-      overflow-x: auto;
-    }
-
-    code.hljs {
-      display: block;
-      font-size: 14px;
-      font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
-      color: #333;
-    }
-
-    .copy-btn {
-      position: absolute;
-      top: 0.25rem;
-      right: 0.25rem;
-      /* 正常状态下的样式 */
-      background: #f0f0f0;
-      color: #333;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .copy-btn:active {
-      /* 点击时的样式 */
-      background: #333;
-      color: #fff;
-    }
-  </style>
 </head>
 
 <body>
@@ -82,25 +44,24 @@
 
               <div class="row mb-2">
                 <div class="col-md-12 mb-2">
-                  <h4 class="mb-2">1.响应式数据绑定</h4>
-                  <p>Vue 的响应式系统是通过利用 ES5 中 Object.defineProperty 方法来实现的。这种方法允许 Vue 将 data
-                    中的数据进行劫持，并在数据发生变化时自动更新相关的视图。Vue 将数据和视图联系起来，当数据发生变化时，会自动重新渲染视图。这样可以避免手动操作 DOM 来更新视图。</p>
+                  <h5 class="mb-5">一直都对Vue的源码有点好奇,今天抽空简单分析一下</h5>
+                  <h4 class="mb-2">源码目录</h4>
                   <pre><button class="copy-btn" data-clipboard-target="#code-block">复制</button><code id="code-block" class="hljs language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;Document&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id="app"&gt;&lt;/div&gt;
-&lt;script src="./vue-2.6.10/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-new Vue({
-el: '#app',
-})
-&lt;/script&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
+  &lt;script src="./vue-2.6.10/dist/vue.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      new Vue({
+        el: '#app',
+      })
+  &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
                 </div>
@@ -235,10 +196,13 @@ el: '#app',
   <script src="/js/owl.carousel.min.js"></script>
   <script src="/js/jquery.waypoints.min.js"></script>
   <script src="/js/jquery.stellar.min.js"></script>
+  <!-- 代码高亮 -->
   <script src="/js/highlight.min.js"></script>
+  <!-- 一键复制 -->
   <script src="/js/clipboard.min.js"></script>
   <script src="/js/main.js"></script>
   <script>
+    //初始化代码highlight
     hljs.highlightAll()
     // 初始化 Clipboard.js
     var clipboard = new ClipboardJS('.copy-btn');
