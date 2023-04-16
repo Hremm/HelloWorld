@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Vue源码解析 - Hello World</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- 代码高亮 -->
+  <link rel="stylesheet" href="/css/default.min.css">
+  <link href="/css/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header role="banner">
+
+    </header>
+    <!-- END header -->
+
+    <section class="site-section py-lg">
+      <div class="container">
+
+        <div class="row blog-entries element-animate">
+
+          <div class="col-md-12 col-lg-8 main-content">
+
+            <div class="post-meta">
+              <span class="author mr-2"><img src="/images/ori.jpg" alt="Colorlib" class="mr-2"> Remm</span>&bullet;
+              <span class="mr-2">04.10, 2021 </span>
+            </div>
+            <h1 class="mb-2">Vue源码解析</h1>
+            <a class="category mb-5" href="note_vue.html">Vue</a>
+
+            <div class="post-content-body">
+
+              <div class="row mb-2">
+                <div class="col-md-12 mb-2">
+                  <h5 class="mb-5">一直都对Vue的源码有点好奇,今天抽空简单分析一下</h5>
+                  <h4 class="mb-2">源码目录</h4>
+                  <pre><button class="copy-btn" data-clipboard-target="#code-block">复制</button><code id="code-block" class="hljs language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app"&gt;&lt;/div&gt;
+  &lt;script src="./vue-2.6.10/dist/vue.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      new Vue({
+        el: '#app',
+      })
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div>
+              <p>分类: <a href="note_vue.html">Vue</a> 标签: <a href="#">原理</a>, <a href="#">Vue</a></p>
+            </div>
+
+            <div class="pt-5">
+              <h3 class="mb-5">评论</h3>
+              <ul class="comment-list">
+                <li class="comment">
+                  <div class="vcard">
+                    <img src="/images/ori.jpg" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>Remm</h3>
+                    <div class="meta">4.10, 2021</div>
+                    <p>
+                      以上是 Vue 2 和 Vue 3 设计原理差异的一些方面，Vue 3 在绝大多数方面相较于 Vue 2 都有所改进，提高了性能、可读性和灵活性。
+                    </p>
+                    <p><a href="#" class="reply rounded">回复</a></p>
+                  </div>
+                </li>
+
+                <!-- END comment-list -->
+
+                <div class="comment-form-wrap pt-5">
+                  <h3 class="mb-5">留下评论</h3>
+                  <form action="#" class="p-5 bg-light">
+                    <div class="form-group">
+                      <label for="message">内容</label>
+                      <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <input name="重置" type="reset" class="btn btn-primary" value="提交">
+                    </div>
+
+                  </form>
+                </div>
+            </div>
+
+          </div>
+
+          <!-- END main-content -->
+
+          <div id="sidebar" class="col-md-12 col-lg-4 sidebar">
+
+          </div>
+          <!-- END sidebar -->
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="mb-3 ">其他文章</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a href="Vue02.html" class="a-block sm d-flex align-items-center height-md"
+              style="background-image: url('/images/vue/Vueorigin.jpg'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">Vue</span>
+                  <span class="mr-2">4.10, 2021 </span>
+                </div>
+                <h3>Vue源码解析</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="Vue03.html" class="a-block sm d-flex align-items-center height-md"
+              style="background-image: url('/images/vue/VueLogin.jpg'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">Vue</span>
+                  <span class="mr-2">4.12, 2021 </span>
+                </div>
+                <h3>使用Vue做一个登录页面</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="Vue04.html" class="a-block sm d-flex align-items-center height-md"
+              style="background-image: url('/images/vue/VuePlugins.jpg'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">Vue</span>
+                  <span class="mr-2">4.15, 2021 </span>
+                </div>
+                <h3>Vue的组件</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- END section -->
+
+    <footer class="site-footer">
+
+    </footer>
+    <!-- END footer -->
+
+  </div>
+
+  <!-- loader -->
+  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#f4b214" />
+    </svg>
+    <span>玩命加载中...</span>
+  </div>
+
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/jquery-migrate-3.0.0.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.waypoints.min.js"></script>
+  <script src="/js/jquery.stellar.min.js"></script>
+  <!-- 代码高亮 -->
+  <script src="/js/highlight.min.js"></script>
+  <!-- 一键复制 -->
+  <script src="/js/clipboard.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    //初始化代码highlight
+    hljs.highlightAll()
+    // 初始化 Clipboard.js
+    var clipboard = new ClipboardJS('.copy-btn');
+    $(function () {
+      $("header").load("/components/header.html");
+    });
+    $(function () {
+      $("footer").load("/components/footer.html");
+    });
+    $(function () {
+      $("#sidebar").load("/components/sidebar.html");
+    });
+  </script>
+</body>
+
+</html>
